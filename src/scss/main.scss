@@ -1,0 +1,356 @@
+@import "fonts.scss";
+@import "mixins.scss";
+@import "vars.scss";
+
+a {
+  text-decoration: none;
+}
+
+.page {
+  height: 100%;
+  font-size: 12px;
+  font-family: "Roboto", "Arial", sans-serif;
+  line-height: 14px;
+  color: $basic-black;
+
+  @include tab {
+    font-size: 11px;
+  }
+
+  @include tab-s {
+    font-size: 10px;
+  }
+
+  &__body {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
+  &__header {
+    max-width: 1170px;
+    margin: 0 auto;
+
+    @include tab {
+      max-width: 870px;
+    }
+
+    @include tab-s {
+      max-width: 760px;
+    }
+  }
+}
+
+.header {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-template-rows: min-content min-content;
+  grid-gap: 9px 27px;
+  padding: 12px 0;
+
+  @include tab {
+    grid-gap: 5px 15px;
+  }
+  
+  @include tab-s {
+    grid-gap: 5px;
+  }
+
+  &__logo {
+    grid-column: 1;
+    grid-row: 1;
+
+    img {
+       width: 212px; 
+
+        @include tab {
+          width: 150px;
+        }
+
+        @include tab-s {
+          width: 120px;
+        }
+    }
+  }
+
+  &__main {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  &__categories {
+    grid-column: 1 /span 2;
+    grid-row: 2;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.info {
+  &__actions,
+  &__main,
+  &__user {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__actions {
+    border-bottom: 1px solid $basic-grey;
+    padding-bottom: 7px;
+  }
+
+  &__main {
+    justify-content: flex-start;
+    padding: 22px 0;
+
+    @include tab {
+      padding: 10px 0;
+    }
+  }
+
+  &__baner {
+    width: 253px;
+    height: 70px;
+    background-color: $basic-grey;
+    margin-right: 30px;
+
+    @include tab {
+      width: 150px;
+      height: 50px;
+      margin-right: 15px;
+    }
+
+    @include tab-s {
+      margin-right: 5px;
+    }
+  }
+
+  &__navigation-item {
+    color: $basic-black;
+    margin-right: 19px;
+
+    @include tab {
+      margin-right: 10px;
+    }
+
+    &:hover {
+      color: $basic-yellow;
+    }
+  }
+
+  &__auth {
+    display: flex;
+    justify-content: space-between;
+    width: 125px;
+  }
+
+  &__auth-btn {
+    cursor: pointer;
+    font-size: 12px;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+
+    &:first-of-type {
+      position: relative;
+      &::after {
+        position: absolute;
+        content: "";
+        width: 1px;
+        top: 1px;
+        right: -14px;
+        height: 11px;
+        background-color: black;
+      }
+    }
+
+    &:hover {
+      color: $basic-yellow;
+    }
+  }
+
+  &__tel {
+    display: block;
+    color: $basic-black;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 29px;
+    letter-spacing: -0.02em;
+    padding-bottom: 16px;
+    border-bottom: 1px solid $basic-grey;
+
+    @include tab {
+      font-size: 21px;
+      padding-bottom: 3px;
+    }
+
+    @include tab-s {
+      font-size: 15px;
+    }
+
+    &:hover {
+      color: $basic-yellow;
+    }
+  }
+
+  &__work,
+  &__city {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+  }
+
+  &__work {
+    margin-bottom: 10px;
+  }
+  
+  &__city {
+    margin-top: 3px;
+  }
+
+  &__city-btn {
+    cursor: pointer;
+    position: relative;
+    font-size: 12px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px dotted black;
+    padding: 0;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 5px;
+      left: -11px;
+      width: 0;
+      height: 0px;
+      border-top: 4px solid transparent;
+      border-bottom: 4px solid transparent;
+      border-left: 8px solid;
+    }
+  }
+
+  &__user {
+    margin-right: 44px;
+
+    @include tab {
+      margin-right: 15px;
+    }
+
+    @include tab-s {
+      margin-right: 5px;
+    }
+  }
+}
+
+.action {
+  margin-right: 35px;
+
+  @include tab {
+    margin-right: 15px;
+  }
+
+  @include tab-s {
+    margin-right: 5px;
+  }
+   
+  &__user-action {
+    display: flex;
+    min-width: 130px;
+    color: $basic-black;
+    margin-bottom: 12px;
+
+    @include tab {
+      margin-bottom: 5px;
+    }
+
+    @include tab-s {
+      min-width: 108px;
+    }
+  }
+
+  &__icon {
+    width: 20px;
+    margin-right: 11px;
+  }
+}
+
+.product {
+  display: flex;
+
+  &__item {
+    display: block;
+    width: 70px;
+    height: 70px;
+    border: 1px solid #D9D9D9;
+    box-sizing: border-box;
+    margin-right: 15px;
+
+    @include tab {
+      margin-right: 5px;
+    }
+  }
+}
+
+.categories {
+  background-color: $basic-black;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+
+  &__search {
+    cursor: pointer;
+    background-color: $basic-yellow;
+    width: 39px;
+    padding: 4px 8px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 10px 0 0 10px;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    padding: 0 19px;
+    color: white;
+
+    @include tab {
+      font-size: 12px;
+      padding: 0 10px;
+    }
+
+    @include tab-s {
+      font-size: 10px;
+    }
+
+    &:hover {
+      background-color: black;
+      color: white;
+    }
+
+    &--selected {
+      background-color: $basic-yellow;
+      color: black;
+    }
+  }
+
+  &__sale {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+    padding: 0 15px;
+    background-color: $basic-yellow;
+    color: black;
+    border-radius: 0 10px 10px 0;
+
+    @include tab {
+      font-size: 12px;
+    }
+  }
+}
+  
