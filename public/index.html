@@ -4,81 +4,15 @@
   <meta charset="utf-8">
   <base href="/">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Test</title>
+  <title>Canvas</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="page__body">
-  <section class="table">
-    <div class="table__header">
-      <h1 class="table__title title">Таблица цветов</h1>
-      <div class="table__controls">
-        <button class="table__controls-btn" type="button" id="save"> 
-          <svg width="15" height="15" viewBox="0 0 15 15">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M14 4.49323V14H1V1H10.1985L14 4.49323ZM10.5882 0L15 4.05405V15H0V0H10.5882Z" fill="#8D8D8D"/>
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M11 10H4V14H11V10ZM3 9V15H12V9H3Z" fill="#8D8D8D"/>
-          </svg>
-        </button>
-        <button class="table__controls-btn" type="button" id="close"></button>
-      </div>
-    </div>
-    <table class="table__main">
-      <tr class="table__list-titles">
-        <th>Цвет</th>
-        <th>Название</th>
-        <th>Тип</th>
-        <th>Код</th>
-        <th>Изменить</th>
-        <th>Удалить</th>
-      </tr>
-      <tr class="table__item item" id="1">
-        <td class="item__color">
-          <div style="background-color: aqua;"></div>
-        </td>
-        <td class="item__name">Мятное утро</td>
-        <td class="item__type">base</td>
-        <td class="item__code">#86EAE9</td>
-        <td class="item__change">
-          <button type="button">
-            <svg width="15" height="16" viewBox="0 0 15 16">
-              <path d="M10.8701 1.60447C11.0429 1.41283 11.2481 1.26081 11.4739 1.1571C11.6997 1.05338 11.9417 1 12.1861 1C12.4306 1 12.6726 1.05338 12.8984 1.1571C13.1242 1.26081 13.3293 1.41283 13.5022 1.60447C13.675 1.79611 13.8121 2.02362 13.9056 2.27401C13.9991 2.5244 14.0473 2.79277 14.0473 3.06379C14.0473 3.33481 13.9991 3.60317 13.9056 3.85356C13.8121 4.10395 13.675 4.33146 13.5022 4.5231L4.61905 14.3735L1 15.468L1.98701 11.4549L10.8701 1.60447Z" stroke="#8D8D8D" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-        </td>
-        <td class="item__delete">
-          <button type="button">
-            <svg width="11" height="13" viewBox="0 0 11 13">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M11 1H0L1.26923 13H9.73077L11 1ZM9.88865 2H1.11135L2.16904 12H8.83096L9.88865 2Z" fill="#8D8D8D"/>
-              <rect width="11" height="2" fill="#8D8D8D"/> 
-            </svg>
-          </button>
-        </td>
-        <tr class="table__item item" id="2">
-          <td class="item__color">
-            <div style="background-color: aqua;"></div>
-          </td>
-          <td class="item__name">Мятное утро</td>
-          <td class="item__type">base</td>
-          <td class="item__code">#86EAE9</td>
-          <td class="item__change">
-            <button type="button">
-              <svg width="15" height="16" viewBox="0 0 15 16">
-                <path d="M10.8701 1.60447C11.0429 1.41283 11.2481 1.26081 11.4739 1.1571C11.6997 1.05338 11.9417 1 12.1861 1C12.4306 1 12.6726 1.05338 12.8984 1.1571C13.1242 1.26081 13.3293 1.41283 13.5022 1.60447C13.675 1.79611 13.8121 2.02362 13.9056 2.27401C13.9991 2.5244 14.0473 2.79277 14.0473 3.06379C14.0473 3.33481 13.9991 3.60317 13.9056 3.85356C13.8121 4.10395 13.675 4.33146 13.5022 4.5231L4.61905 14.3735L1 15.468L1.98701 11.4549L10.8701 1.60447Z" stroke="#8D8D8D" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </button>
-          </td>
-          <td class="item__delete">
-            <button type="button">
-              <svg width="11" height="13" viewBox="0 0 11 13">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M11 1H0L1.26923 13H9.73077L11 1ZM9.88865 2H1.11135L2.16904 12H8.83096L9.88865 2Z" fill="#8D8D8D"/>
-                <rect width="11" height="2" fill="#8D8D8D"/> 
-              </svg>
-            </button>
-          </td>
-      </tr>
-    </table>
-    <button class="table__btn btn" type="button">Добавить цвет</button>
-  </section>
-  <script src="bundle.js"></script>
+  <main class="page__main">
+    <canvas id="item-1"></canvas>
+    <canvas id="item-2"></canvas>
+    <script src="bundle.js"></script>
+  </main>
 </body>
 </html>

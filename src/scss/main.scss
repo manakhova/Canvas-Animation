@@ -7,159 +7,18 @@
   font-size: 11px;
   font-family: "Lato", "Arial", sans-serif;
   line-height: 14px;
-  color: white;
-  background-color: black;
-
-
-  @include tab-s {
-    font-size: 10px;
-  }
-
-  &__body {
-    max-width: 1440px;
-    margin: 0 auto;
-  }
-}
-
-.table {
-  width: 679px;
-  margin: 30px auto;
   background-color: $basic-black;
-  border-radius: 20px;
-  padding: 30px 0;
-
-  &__header {
-    display: flex;
-    padding: 0 20px;
-  }
-
-  &__title {
-    flex-grow: 1;
-  }
-
-  &__main {
-    width: 100%;
-    margin: 30px 0;
-  }
-
-  &__list-titles {
-    th {
-      font-size: 18px;
-      font-weight: 600;
-      text-align: left;
-      padding: 15px;
-      background-color: $basic-grey;
-    }
-  }
-
-  &__item  {
-    td {
-      text-align: left;
-      background-color: $basic-grey;
-    }
-  } 
-
-  &__btn {
-    display: block;
-    margin: auto;
-  }
-
-  &__controls {
-    display: flex;
-  }
-
-  &__controls-btn {
-    background-color: transparent;
-    border: none;
-  }
-
-  #close {
-    position: relative;
-    padding: 10px;
-
-    &::before,
-    &::after {
-      position: absolute;
-      content: '';
-      width: 10px;
-      height: 1px;
-      background-color: $basic-light-grey;
-      transform: rotate(45deg);
-    }
-
-    &::after {
-      transform: rotate(-45deg);
-    }
-  }
 }
 
-.title {
-  margin: 0;
-  font-weight: 600;
-  font-size: 18px;
-  text-align: center;
+canvas {
+  border-bottom: 1px solid $basic-light-grey;
 }
 
-.item {
-  &__color,
-  &__name,
-  &__type,
-  &__code {
-    padding: 7px 25px;
-    color: $basic-light-grey;
-    div {
-      width: 41px;
-      height: 41px;
-      margin: auto;
-    }
-  }
-
-  &__change,
-  &__delete {
-    button {
-      display: block;
-      cursor: pointer;
-      margin: auto;
-      background-color: transparent;
-      border: none;
-    }
-  }
-
-  &__change {
-    svg {
-      fill: none;
-
-      &:hover {
-        path {
-          stroke: $special-blue;
-        }
-      }
-    }
-  }
-
-  &__delete {
-    svg:hover {
-      path,
-      rect {
-        fill: $special-red;
-      }
-    }
-  }
+#item-1 {
+  cursor: none;
 }
 
-.btn {
-  cursor: pointer;
-  font-size: 12px;
-  font-weight: 700;
-  width: 220px;
-  padding: 10px;
-  color: white;
-  background-color: transparent;
-  border: 1px solid $special-blue;
-  border-radius: 40px;
-  box-sizing: border-box;
-
-  &:hover {
-    background-color: $special-blue;
-  }
+#item-2 {
+  background-color: black;
 }
+
