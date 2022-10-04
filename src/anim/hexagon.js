@@ -3,8 +3,8 @@ const ctx = canvas.getContext('2d');
 
 const config = {
   bgrColor: `rgba(50, 50, 50, 0.01)`,
-  directionCount: 20,
-  steptToTurn: 3,
+  directionCount: 6,
+  steptToTurn: 10,
   dotSize: 2,
   dotCount: 300,
   dotVelocity: 1,
